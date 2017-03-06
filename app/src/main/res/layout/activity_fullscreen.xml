@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/red"
+    android:background="@drawable/unnamed"
     android:scaleType="centerCrop"
 
     tools:context="ru.inecopay.inecoadminapp.FullscreenActivity">
@@ -49,51 +49,51 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/pin1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/checkbox_on_background"
+                android:background="@drawable/selector_pin_off"
                 android:gravity="center"
                 android:maxWidth="12dp"
                 android:minWidth="12dp" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/pin2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/checkbox_off_background"
+                android:background="@drawable/selector_pin_off"
                 android:gravity="center"
                 android:maxWidth="12dp"
                 android:minWidth="12dp" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/pin3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/checkbox_off_background"
+                android:background="@drawable/selector_pin_off"
                 android:gravity="center"
                 android:maxWidth="20dp"
                 android:minWidth="20dp" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/pin4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/checkbox_off_background"
+                android:background="@drawable/selector_pin_off"
                 android:gravity="center"
                 android:maxWidth="20dp"
                 android:minWidth="20dp" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/pin5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/checkbox_off_background"
+                android:background="@drawable/selector_pin_off"
                 android:gravity="center"
                 android:maxWidth="20dp"
                 android:minWidth="20dp" />

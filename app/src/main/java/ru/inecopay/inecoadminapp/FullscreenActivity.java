@@ -6,12 +6,14 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -23,6 +25,15 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private static final int UI_ANIMATION_DELAY = 300;
     private final Handler mHideHandler = new Handler();
+
+    private String pinCode = "";
+
+    private Button pin1;
+    private Button pin2;
+    private Button pin3;
+    private Button pin4;
+    private Button pin5;
+
     private final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
         @Override
@@ -61,13 +72,150 @@ public class FullscreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fullscreen);
         getSupportActionBar().hide();
 
+        pin1 = (Button) findViewById(R.id.pin1);
+        pin2 = (Button) findViewById(R.id.pin2);
+        pin3 = (Button) findViewById(R.id.pin3);
+        pin4 = (Button) findViewById(R.id.pin4);
+        pin5 = (Button) findViewById(R.id.pin5);
 
         final Button numButton1 = (Button) findViewById(R.id.num_button_1);
         numButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                numButton1.setBackgroundResource(R.drawable.buttonshape_click);
+                if( pinCode.length()<6) pinCode = pinCode+1;
+                repaintPinCode();
             }
         });
+
+        final Button numButton2 = (Button) findViewById(R.id.num_button_2);
+        numButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+2;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton3 = (Button) findViewById(R.id.num_button_3);
+        numButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+3;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton4 = (Button) findViewById(R.id.num_button_4);
+        numButton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+4;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton5 = (Button) findViewById(R.id.num_button_5);
+        numButton5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+5;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton6 = (Button) findViewById(R.id.num_button_6);
+        numButton6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+6;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton7 = (Button) findViewById(R.id.num_button_7);
+        numButton7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+7;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton8 = (Button) findViewById(R.id.num_button_8);
+        numButton8.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+8;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton9 = (Button) findViewById(R.id.num_button_9);
+        numButton9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+9;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButton0 = (Button) findViewById(R.id.num_button_0);
+        numButton0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if( pinCode.length()<6) pinCode = pinCode+0;
+                repaintPinCode();
+            }
+        });
+
+        final Button numButtonBack = (Button) findViewById(R.id.num_button_back);
+        numButtonBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.i("PINCODE","Before:"+pinCode);
+                if( pinCode.length()>0) pinCode = pinCode.substring(0,pinCode.length()-1);
+                Log.i("PINCODE","After:"+pinCode);
+                repaintPinCode();
+            }
+        });
+
+        final Button numButtonCls = (Button) findViewById(R.id.num_button_cls);
+        numButtonCls.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                pinCode = "";
+                repaintPinCode();
+            }
+        });
+
+    }
+
+    private void repaintPinCode(){
+        if(pinCode.length()>5) return;
+
+        pin1.setBackgroundResource(R.drawable.selector_pin_off);
+        pin2.setBackgroundResource(R.drawable.selector_pin_off);
+        pin3.setBackgroundResource(R.drawable.selector_pin_off);
+        pin4.setBackgroundResource(R.drawable.selector_pin_off);
+        pin5.setBackgroundResource(R.drawable.selector_pin_off);
+
+
+        Log.i("PINCODE",pinCode.toString());
+        if( pinCode.length()==1 ){
+            pin1.setBackgroundResource(R.drawable.selector_pin_on);
+        }else if(pinCode.length()==2){
+            pin1.setBackgroundResource(R.drawable.selector_pin_on);
+            pin2.setBackgroundResource(R.drawable.selector_pin_on);
+        }else if(pinCode.length()==3){
+            pin1.setBackgroundResource(R.drawable.selector_pin_on);
+            pin2.setBackgroundResource(R.drawable.selector_pin_on);
+            pin3.setBackgroundResource(R.drawable.selector_pin_on);
+        }else if(pinCode.length()==4){
+            pin1.setBackgroundResource(R.drawable.selector_pin_on);
+            pin2.setBackgroundResource(R.drawable.selector_pin_on);
+            pin3.setBackgroundResource(R.drawable.selector_pin_on);
+            pin4.setBackgroundResource(R.drawable.selector_pin_on);
+        }else if(pinCode.length()==5){
+            pin1.setBackgroundResource(R.drawable.selector_pin_on);
+            pin2.setBackgroundResource(R.drawable.selector_pin_on);
+            pin3.setBackgroundResource(R.drawable.selector_pin_on);
+            pin4.setBackgroundResource(R.drawable.selector_pin_on);
+            pin5.setBackgroundResource(R.drawable.selector_pin_on);
+//            Toast toast = Toast.makeText(this,pinCode,Toast.LENGTH_SHORT);
+//            toast.show();
+            Log.i("PINCODE","FullHouse:"+pinCode);
+        }else{
+            Log.i("PINCODE","Перебор:"+pinCode);
+        }
+
     }
 
     @Override
