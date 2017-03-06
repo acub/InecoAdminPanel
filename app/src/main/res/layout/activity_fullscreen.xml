@@ -2,10 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/unnamed"
+    android:background="@drawable/red"
     android:scaleType="centerCrop"
 
-    android:src="@drawable/unnamed"
     tools:context="ru.inecopay.inecoadminapp.FullscreenActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -24,7 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="45dp"
+            android:minHeight="60dp"
             android:orientation="horizontal">
 
             <TextView
@@ -34,7 +33,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="InecoPay админка"
+                android:text="InecoPay\nПанель администратора"
                 android:textColor="@android:color/background_light"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -56,11 +55,21 @@
                 android:layout_weight="1"
                 android:background="@android:drawable/checkbox_on_background"
                 android:gravity="center"
-                android:maxWidth="20dp"
-                android:minWidth="20dp" />
+                android:maxWidth="12dp"
+                android:minWidth="12dp" />
 
             <Button
                 android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/checkbox_off_background"
+                android:gravity="center"
+                android:maxWidth="12dp"
+                android:minWidth="12dp" />
+
+            <Button
+                android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,21 +79,11 @@
                 android:minWidth="20dp" />
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:drawable/presence_online"
-                android:gravity="center"
-                android:maxWidth="20dp"
-                android:minWidth="20dp" />
-
-            <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/presence_invisible"
+                android:background="@android:drawable/checkbox_off_background"
                 android:gravity="center"
                 android:maxWidth="20dp"
                 android:minWidth="20dp" />
@@ -94,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:drawable/presence_invisible"
+                android:background="@android:drawable/checkbox_off_background"
                 android:gravity="center"
                 android:maxWidth="20dp"
                 android:minWidth="20dp" />
